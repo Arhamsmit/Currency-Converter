@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+}
+.main-con{
+    width: 100%;
+    height: 100vh;
+}
+.currency-con-container{
+    width: 30%;
+    height: 45vh;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 40px 40px 0px rgba(0, 0, 0, 0.2), 0px 40px 40px 0px rgba(0, 0, 0, 0.19);
+}
+#name{
+    width: 100%;
+}
+input{
+    width: 40%;
+    height: 40px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    border-right: 1px solid black;
+}
+select{
+    width: 40%;
+    height: 40px;
+    margin-right: 10px ;
+    border: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.curr-con{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.button{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+}
+#btn{
+    width: 40%;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(0, 81, 255);
+    color: white;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 900px){
+    .main-con{
+        width: 100%;
+        height: 100vh;
+    }
+    .currency-con-container{
+        width: 95%;
+        height: 100vh;
+        margin-top: 0px;
+    }
+    input{
+        width: 150px;
+        background: none;
+    }
+}
