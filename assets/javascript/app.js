@@ -1,26 +1,35 @@
-// let check = fetch("https://v6.exchangerate-api.com/v6/745b718039fdff872b2863c9/latest/USD"){}
-// check.then((value2) => {
-//     return value2.json()
-//     let count = value2.conversion_rates
-//     let dropdown = document.getElementById("currency")
-//     for(let firdrop in count){
-//         // console.log(firdrop)
-//         dropdown.innerHTML += `<option>${firdrop}</option>`
-//     }
-// })
-function convertCurr(){
-    let currApi = fetch("https://v6.exchangerate-api.com/v6/745b718039fdff872b2863c9/latest/USD");
-    let apires = currApi.json();
-    let dropdown = document.getElementById("currency")
-    let dropdown2 = document.getElementById("convert-curr")
-    let country = apires.conversion_rates
-    for(let firdrop in country){
-        dropdown.innerHTML += `<option>${firdrop}</option>`
-        dropdown2.innerHTML += `<option>${firdrop}</option>`
+async function convertCurr() {
+    let currApi = await fetch("https://v6.exchangerate-api.com/v6/745b718039fdff872b2863c9/latest/USD");
+    let apires = await currApi.json();
+    let country = await apires.conversion_rates;
+
+    let dropdown = document.getElementById("currency");         
+    let dropdown2 = document.getElementById("convert-curr");    
+    let input1 = document.getElementById("curr");               
+    let input2 = document.getElementById("con-curr");          
+    let btn = document.getElementById("btn");
+
+    for (let firdrop in country) {
+        dropdown.innerHTML += `<option value="${firdrop}">${firdrop}</option>`;
+        dropdown2.innerHTML += `<option value="${firdrop}">${firdrop}</option>`;
     }
+
+    dropdown2.addEventListener("change", () => {
+        let rate = country[dropdown2.value];
+        input2.placeholder = `1 ${dropdown.value} = ${rate} ${dropdown2.value}`;
+    });
+
+    if(input1.value === ""){
+        alert("Enter convert value")
+    }
+    btn.addEventListener("click", () => {
+        let fromCurrency = dropdown.value;
+        let toCurrency = dropdown2.value;
+        let amount = parseFloat(input1.value);
+
+        let amountInUSD = amount / country[fromCurrency];
+        let convertedAmount = amountInUSD * country[toCurrency];
+        input2.value = convertedAmount.toFixed(2);
+    });
 }
-function curr() {
-    let check = country[dropdown.value]
-    console.log(check)
-}
-convertCurr()
+convertCurr();

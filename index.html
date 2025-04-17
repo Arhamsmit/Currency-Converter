@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
+    <div class="main-con">
+        <div class="currency-con-container">
+            <h1 id="name">Currency Converter</h1>
+            <div class="curr-con">
+                <input type="number" id="curr">
+                <select name="" id="currency">
+                </select>
+            </div>
+            <div class="curr-con">
+                <input type="number" id="con-curr" readonly>
+                <select name="" id="convert-curr">
+                </select>
+            </div>
+            <div class="button">
+                <button id="btn">Convert Currency</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/javascript/app.js"></script>
 </body>
 </html>
