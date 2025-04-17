@@ -19,9 +19,6 @@ async function convertCurr() {
         input2.placeholder = `1 ${dropdown.value} = ${rate} ${dropdown2.value}`;
     });
 
-    if(input1.value === ""){
-        alert("Enter convert value")
-    }
     btn.addEventListener("click", () => {
         let fromCurrency = dropdown.value;
         let toCurrency = dropdown2.value;
