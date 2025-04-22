@@ -1,7 +1,10 @@
 async function convertCurr() {
-    let currApi = await fetch("https://v6.exchangerate-api.com/v6/745b718039fdff872b2863c9/latest/USD");
+    const currApi = await fetch(`https://v6.exchangerate-api.com/v6/745b718039fdff872b2863c9/latest/USD`);
     let apires = await currApi.json();
+    console.log(apires)
     let country = await apires.conversion_rates;
+    let check = await currApi.base_code;
+
 
     let dropdown = document.getElementById("currency");         
     let dropdown2 = document.getElementById("convert-curr");    
@@ -16,7 +19,7 @@ async function convertCurr() {
 
     dropdown2.addEventListener("change", () => {
         let rate = country[dropdown2.value];
-        input2.placeholder = `1 ${dropdown.value} = ${rate} ${dropdown2.value}`;
+        // input2.placeholder = `1 ${dropdown.value} = ${country[dropdown2.value]} ${dropdown2.value}`;
     });
 
     btn.addEventListener("click", () => {

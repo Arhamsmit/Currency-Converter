@@ -12,6 +12,7 @@ body{
 }
 .currency-con-container{
     width: 30%;
+    filter: blur(0px);
     height: 45vh;
     margin: 50px auto;
     padding: 10px;
