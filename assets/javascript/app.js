@@ -1,7 +1,6 @@
 async function convertCurr() {
     const currApi = await fetch(`https://v6.exchangerate-api.com/v6/745b718039fdff872b2863c9/latest/USD`);
     let apires = await currApi.json();
-    console.log(apires)
     let country = await apires.conversion_rates;
 
     let dropdown = document.getElementById("currency");         
