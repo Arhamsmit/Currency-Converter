@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(65 56 75);
+}
+.main-con{
+    width: 100%;
+    height: 100vh;
+}
+.currency-con-container{
+    width: 30%;
+    filter: blur(0px);
+    height: 45vh;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(36, 28, 46, 0.564);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.263), 0px 20px 20px 0px rgba(0, 0, 0, 0.263);
+}
+#name{
+    width: 100%;
+    color: white;
+}
+input{
+    width: 40%;
+    height: 40px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    border-right: 1px solid black;
+    background-color: transparent;
+    color: white;
+}
+select{
+    background-color: transparent;
+    width: 40%;
+    height: 40px;
+    margin-right: 10px ;
+    border: none;
+    color: white;
+}
+option{
+    background-color: rgb(36 28 46);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.curr-con{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.button{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+}
+#btn{
+    width: 40%;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(36, 28, 46, 0.687);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2), 0px 10px 10px 0px rgba(0, 0, 0, 0.19);
+}
+@media only screen and (max-width: 900px){
+    .main-con{
+        width: 100%;
+        height: 100vh;
+    }
+    .currency-con-container{
+        width: 95%;
+        height: 100vh;
+        margin-top: 0px;
+    }
+    input{
+        width: 150px;
+        background: none;
+    }
+}
