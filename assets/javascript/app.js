@@ -3,8 +3,6 @@ async function convertCurr() {
     let apires = await currApi.json();
     console.log(apires)
     let country = await apires.conversion_rates;
-    let check = await currApi.base_code;
-
 
     let dropdown = document.getElementById("currency");         
     let dropdown2 = document.getElementById("convert-curr");    
@@ -19,7 +17,6 @@ async function convertCurr() {
 
     dropdown2.addEventListener("change", () => {
         let rate = country[dropdown2.value];
-        // input2.placeholder = `1 ${dropdown.value} = ${country[dropdown2.value]} ${dropdown2.value}`;
     });
 
     btn.addEventListener("click", () => {
